@@ -3,7 +3,7 @@ import './App.scss';
 import Home from './pages/home';
 import Products from './pages/products/index';
 
-function App() {
+export default  function App() {
   return (
     <div className="App">
       <Routes>
@@ -13,5 +13,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
