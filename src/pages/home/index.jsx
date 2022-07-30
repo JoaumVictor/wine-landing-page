@@ -1,14 +1,34 @@
-import React from 'react';
-import Header from '../../components/header';
+import React, { useContext, useEffect } from 'react';
+import Context from '../../context/Context';
+
 import './style.scss';
-import MktTop from '../../components/banners/mktTop/index';
+import Header from '../../components/header';
+import getApi from '../../helper/getAPI';
+import BannerHead from '../../components/banners/bannerHead';
+import Recommended from '../../components/recommended';
 
 export default function Home() {
+  const getProducts = async (x) => getApi(x);
+
+  const {
+    setProducts, setAdvantages,
+  } = useContext(Context);
+
+  useEffect(() => {
+    const fetchAPI = async () => {
+      const productsList = await getProducts('products');
+      const advantagesList = await getProducts('advantages');
+      setProducts(productsList.items);
+      setAdvantages(advantagesList[0].plans);
+    };
+    fetchAPI();
+  }, []);
+
   return (
-    <div className='home-container'>
-      <MktTop />
+    <div className="home-container">
       <Header />
-      <h1>ESSA É A PÁGINA DE HOME</h1>
+      <BannerHead />
+      <Recommended />
     </div>
-  )
+  );
 }

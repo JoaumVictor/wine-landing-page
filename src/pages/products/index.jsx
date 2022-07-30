@@ -6,5 +6,5 @@ export default function Products() {
     <div>
       <h1>ESSA É A PÁGINA DE PRODUCTS</h1>
     </div>
-  )
+  );
 }

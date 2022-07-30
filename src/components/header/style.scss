@@ -1,15 +1,40 @@
 $rosa: #B4116D;
 $cinza: #777;
 $pretin: #343434;
+$bege: #C8A876;
+$branquin: #F9F8F5;
+
+@mixin fastDisplay($x, $y, $z) {
+  display: flex;
+  align-items: center;
+  justify-content: $x;
+  flex-flow: $y $z;
+}
 
 header {
-  width: 100vw;
+  width: 100%;
   height: 100px;
-  background-color: white;
+  background-color: rgba(240, 239, 239, 0.4);
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-flow: column nowrap;
   padding: 0 200px;
+  z-index: 1;
+  backdrop-filter: blur( 5.5px );
+
+  .logo-content {
+    @include fastDisplay(center, row, nowrap);
+    height: 50%;
+    width: 100%;
+  }
+
+  .links-content {
+    @include fastDisplay(space-evenly, row, nowrap);
+    height: 50%;
+    width: 100%;
+  }
 
   .logotipo {
     width: 100px;
@@ -17,11 +42,10 @@ header {
   }
 
   .links-header {
-    color: $cinza;
-    font-size: 20px;
+    color: rgb(50, 50, 50);
+    font-size: 18px;
     position: relative;
     cursor: pointer;
-    text-transform: capitalize;
     font-weight: 600;
 
     &::after {
@@ -30,28 +54,45 @@ header {
       width: 100%;
       height: 2px;
       margin: 10px 0;
-      bottom: -150%;
+      bottom: -86%;
       left: 0;
+      transition: 0.5s;
     }
 
     &:hover {
-      color: $rosa;
-
+      color: white;
       &::after {
-        background-color: $rosa;
+        background-color: white;
       }
     }
   }
 
   .links-icons {
-    border: 2px solid #777;
-    border-radius: 50%;
-    font-size: 30px;
-    color: #777;
+    font-size: 26px;
+    color: rgb(50, 50, 50);
+    position: relative;
     min-width: 60px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      margin: 10px 0;
+      bottom: -12%;
+      left: 0;
+      transition: 0.5s;
+    }
+
+    &:hover {
+      color: white;
+      &::after {
+        background-color: white;
+      }
+    }
   }
 }

@@ -1,0 +1,24 @@
+@mixin fastDisplay($x, $y, $z) {
+  display: flex;
+  align-items: center;
+  justify-content: $x;
+  flex-flow: $y $z;
+}
+
+.recommended-content {
+  @include fastDisplay(space-evenly, column, nowrap);
+  background-color: rgb(215, 195, 164);
+  height: 100vh;
+  width: 100%;
+
+  h1 {
+    @include fastDisplay(start, row, nowrap);
+    height: 25%;
+    width: 100%;
+  }
+
+  .products-content {
+    @include fastDisplay(space-evenly, row, wrap);
+    z-index: 1;
+  }
+}

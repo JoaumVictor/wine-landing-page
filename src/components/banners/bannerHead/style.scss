@@ -1,0 +1,28 @@
+@mixin fastDisplay($x, $y, $z) {
+  display: flex;
+  align-items: center;
+  justify-content: $x;
+  flex-flow: $y $z;
+}
+
+.bannerHead {
+  @include fastDisplay(center, row, nowrap);
+  background-image: url('../../../img/forte.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: initial;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  text-align: center;
+
+  h1 {
+    color: white;
+  }
+
+  img {
+    width: 100vw;
+  }
+}
