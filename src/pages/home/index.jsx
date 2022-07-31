@@ -9,6 +9,7 @@ import Recommended from '../../components/recommended';
 import BannerHead from '../../components/banners/bannerHead';
 import BannerMid from '../../components/banners/bannerMid';
 import BannerBottom from '../../components/banners/bannerBottom/index';
+import Footer from '../../components/footer/index';
 
 export default function Home() {
   const getProducts = async (x) => getApi(x);
@@ -47,6 +48,9 @@ export default function Home() {
 
           <FullpageSection>
             <BannerBottom />
+          </FullpageSection>
+          <FullpageSection>
+            <Footer />
           </FullpageSection>
         </FullPageSections>
       </Fullpage>
