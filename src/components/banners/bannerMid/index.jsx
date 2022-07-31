@@ -15,6 +15,7 @@ export default function BannerMid() {
           <ComboCard obj={combos.combo2} />
         </div>
         <h1 className="titles-box-info">Não dá para perder.</h1>
+        <button className="ParticipateButton" type="button">QUERO FAZER PARTE!</button>
       </div>
     </div>
   );

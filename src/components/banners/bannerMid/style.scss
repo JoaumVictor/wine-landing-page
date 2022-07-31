@@ -16,7 +16,7 @@
     background-image: url('../../../img/adega.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 102%;
+    height: 100%;
     width: 50%;
   }
 
@@ -37,5 +37,18 @@
     height: 50vh;
     width: 100%;
     margin: 60px auto;
+  }
+
+  .ParticipateButton {
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      color: white;
+      background-color: black;
+    }
   }
 }

@@ -5,9 +5,10 @@ import Context from '../../context/Context';
 import './style.scss';
 import Header from '../../components/header';
 import getApi from '../../helper/getAPI';
-import BannerHead from '../../components/banners/bannerHead';
 import Recommended from '../../components/recommended';
+import BannerHead from '../../components/banners/bannerHead';
 import BannerMid from '../../components/banners/bannerMid';
+import BannerBottom from '../../components/banners/bannerBottom/index';
 
 export default function Home() {
   const getProducts = async (x) => getApi(x);
@@ -42,6 +43,10 @@ export default function Home() {
 
           <FullpageSection>
             <BannerMid />
+          </FullpageSection>
+
+          <FullpageSection>
+            <BannerBottom />
           </FullpageSection>
         </FullPageSections>
       </Fullpage>

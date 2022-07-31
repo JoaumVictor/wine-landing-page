@@ -1,0 +1,158 @@
+@mixin fastDisplay($x, $y, $z) {
+  display: flex;
+  align-items: center;
+  justify-content: $x;
+  flex-flow: $y $z;
+}
+
+@mixin backgroundSettings() {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bannerBottom {
+  @include fastDisplay(space-evenly, column, nowrap);
+  background: rgb(172,86,35);
+  background: radial-gradient(circle, rgba(172,86,35,1) 0%, rgba(96,42,13,0.9553571428571429) 49%);
+  width: 100%;
+  height: 100vh;
+
+  .mid-box {
+  @include fastDisplay(space-evenly, row, nowrap);
+    background-color: transparent;
+    width: 85%;
+    height: 65%;
+
+    .mid-box-left {
+      background: url('https://cellarvinhos.vtexassets.com/assets/vtex.file-manager-graphql/images/06ea9114-309c-444e-87a4-3ff5f137177f___b3127e5721b32a3eb7b59851c7b83952.png');
+      @include backgroundSettings();
+      @include fastDisplay(end, column, nowrap);
+      position: relative;
+      text-align: center;
+      height: 90%;
+      width: 30%;
+      cursor: pointer;
+
+      h1 {
+        font-size: 2.2rem;
+        color: white;
+        font-weight: bold;
+        margin: 10px
+      }
+
+      button {
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: 0.5s;
+        color: white;
+        margin: 10px;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.05);
+          background-color: black;
+          border: 1px solid black;
+          color: white;
+        }
+      }
+    }
+
+    .mid-box-right {
+      @include fastDisplay(space-between, column, nowrap);
+      background-color: transparent;
+      height: 90%;
+      width: 62%;
+
+      .mid-box-right-one {
+        @include fastDisplay(space-between, row, nowrap);
+        height: 47%;
+        width: 100%;
+
+        .mid-box-right-one-left {
+          background: url("../../../img/encontro.jpg");
+          @include backgroundSettings();
+          @include fastDisplay(end, column, nowrap);
+          height: 100%;
+          width: 48%;
+          cursor: pointer;
+          text-align: center;
+
+          h1 {
+            color: white;
+            margin: 10px 15px 30px 15px;
+            font-size: 20px;
+          }
+        }
+
+        .mid-box-right-one-right {
+          background: url('../../../img/card2.webp');
+          @include backgroundSettings();
+          @include fastDisplay(end, column, nowrap);
+          height: 100%;
+          width: 48%;
+          text-align: center;
+          cursor: pointer;
+
+            h1 {
+              color: white;
+              font-size: 18px;
+              margin: 10px 10px 30px 10px;
+            }
+        }
+      }
+
+      .mid-box-right-two {
+        @include fastDisplay(space-between, row, nowrap);
+        background-color: transparent;
+        height: 47%;
+        width: 100%;
+
+        .mid-box-right-two-left {
+          background: url('../../../img/card3.webp');
+          @include backgroundSettings();
+          @include fastDisplay(center, column, nowrap);
+          height: 100%;
+          width: 58%;
+          text-align: center;
+          cursor: pointer;
+
+          h1 {
+            color: white;
+            font-size: 24px;
+            margin: 10px;
+          }
+        }
+        
+        .mid-box-right-two-right {
+          background: url('../../../img/prateleira.jpg');
+          @include backgroundSettings();
+          @include fastDisplay(center, column, nowrap);
+          text-align: center;
+          height: 100%;
+          width: 38%;
+          cursor: pointer;
+
+          button {
+            border-radius: 8px;
+            border: 2px solid black;
+            background-color: black;
+            font-weight: 400;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+    }
+  }
+}
