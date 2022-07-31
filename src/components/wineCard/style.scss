@@ -12,9 +12,20 @@
   margin: 10px;
   text-align: center;
   height: 450px;
+  position: relative;
+
+  .premium {
+    position: absolute;
+    transition: 0.5s;
+    transform: rotate(-7deg);
+    top: 58%;
+    left: 50%;
+    width: 15%;
+    z-index: 5;
+  }
 
   &:hover {
-    img {
+    .wine {
       transform: scale(1.1);
     }
 

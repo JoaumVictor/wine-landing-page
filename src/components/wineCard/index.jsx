@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import './style.scss';
+import premium from '../../img/premium.png';
 
 export default function WineCard({ obj }) {
   const {
@@ -16,9 +17,10 @@ export default function WineCard({ obj }) {
 
   return (
     <div className="wine-card">
+      {country === 'Espanha' && <img className="premium" src={premium} alt="premium" />}
       <p className="city">{`${country} | ${getWineYear(name)} `}</p>
       <p className="bold">{getName(name)}</p>
-      <img src={image} alt="" />
+      <img className="wine" src={image} alt="wine" />
       <p className="bold price">{`R$ ${price.toFixed(2)}`}</p>
       <p>{type}</p>
       <button type="button">Mais Informações</button>

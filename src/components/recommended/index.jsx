@@ -28,6 +28,13 @@ export default function Recommended() {
           { products.slice(0, 6)?.map((item) => <WineCard key={generateId()} obj={item} />)}
         </Slider>
       </div>
+      <div className="recommended-options">
+        <a className="selected" href="/">Recomendados</a>
+        <span>|</span>
+        <a href="/">Promoções</a>
+        <span>|</span>
+        <a href="/">Queridinhos</a>
+      </div>
     </div>
   );
 }

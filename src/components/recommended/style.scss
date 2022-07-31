@@ -53,9 +53,23 @@ background: radial-gradient(circle, rgba(158,76,29,1) 4%, rgba(131,67,30,1) 28%,
   }
 
   .products-content {
-    // @include fastDisplay(space-evenly, row, wrap);
-    // z-index: 1;
     height: 85%;
     width: 85%;
+  }
+
+  .recommended-options {
+    @include fastDisplay(space-evenly, row, nowrap);
+    height: 10%;
+    width: 35%;
+
+    a {
+      font-family: 'GAELA', sans-serif;
+      font-size: 20px;
+    }
+
+    .selected {
+      text-decoration: underline;
+      line-height: 110%;
+    }
   }
 }
