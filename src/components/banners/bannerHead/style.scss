@@ -7,7 +7,7 @@
 
 .bannerHead {
   @include fastDisplay(center, row, nowrap);
-  background-image: url('../../../img/forte.jpg');
+  background-image: url('../../../img/bannerHead.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: initial;
@@ -20,6 +20,9 @@
 
   h1 {
     color: white;
+    font-family: 'GAELA', sans-serif;
+    font-size: 42px;
+    font-weight: 200;
   }
 
   img {

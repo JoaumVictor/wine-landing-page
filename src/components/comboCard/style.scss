@@ -1,0 +1,82 @@
+@mixin fastDisplay($x, $y, $z) {
+  display: flex;
+  align-items: center;
+  justify-content: $x;
+  flex-flow: $y $z;
+}
+
+.combo-card {
+  @include fastDisplay(space-evenly, column, nowrap);
+  border: 1px solid black;
+  height: 450px;
+  width: 270px;
+  height: 115%;
+  position: absolute;
+  background-color: white;
+  text-align: center;
+
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+
+    button {
+      color: white;
+      background-color: black;
+    }
+  }
+
+  &.combo1 {
+    top: -9%;
+    left: 15%;
+  }
+  
+  &.combo2 {
+    top: -3%;
+    right: 15%;
+  }
+
+  .combo-card-description {
+    font-size: 14px
+  }
+
+  .partner {
+    @include fastDisplay(center, row, nowrap);
+    span {
+      width: 50px;
+      font-size: 16px;
+      font-weight: 800;
+      color: black;
+      line-height: 85%;
+      margin-right: 10px;
+    }
+
+    p {
+      font-size: 24px;
+      color: rgb(200, 26, 120);
+      font-weight: 600;
+    }
+  }
+
+  .noPartner {
+    color: #777;
+    font-size: 14px;
+  }
+
+  .combo-card-title {
+    font-size: 18px;
+  }
+
+  img {
+    transition: 0.5s;
+    width: 130px;
+  }
+
+  button {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+  }
+}

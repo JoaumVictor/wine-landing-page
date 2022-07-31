@@ -3,7 +3,7 @@ import banner1 from './banner1.webp';
 import banner2 from './banner2.webp';
 import banner4 from './banner4.jpg';
 import banner5 from './banner5.webp';
-import mkt from './mkt-top.webp';
+import adega from './adega.jpg';
 
 const images = {
   logo,
@@ -11,7 +11,7 @@ const images = {
   banner2,
   banner4,
   banner5,
-  mkt,
+  adega,
 };
 
 export default images;
