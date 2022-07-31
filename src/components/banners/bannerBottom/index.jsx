@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect, useCallback } from 'react';
 import './style.scss';
 import ScrollReveal from 'scrollreveal';
 
 export default function bannerBottom() {
-  ScrollReveal().reveal('.mid-box-left', { delay: 500 });
-  ScrollReveal().reveal('.mid-box-right-one-left', { delay: 700 });
-  ScrollReveal().reveal('.mid-box-right-two-left', { delay: 800 });
-  ScrollReveal().reveal('.mid-box-right-one-right', { delay: 900 });
-  ScrollReveal().reveal('.mid-box-right-two-right', { delay: 1000 });
+  const reveal = useCallback(() => {
+    ScrollReveal().reveal('.mid-box-left', { delay: 500 });
+    ScrollReveal().reveal('.mid-box-right-one-left', { delay: 700 });
+    ScrollReveal().reveal('.mid-box-right-two-left', { delay: 800 });
+    ScrollReveal().reveal('.mid-box-right-one-right', { delay: 900 });
+    ScrollReveal().reveal('.mid-box-right-two-right', { delay: 1000 });
+  }, []);
+
+  useEffect(() => {
+    reveal();
+  }, []);
 
   return (
     <div className="bannerBottom">

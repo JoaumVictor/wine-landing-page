@@ -9,9 +9,8 @@ $bege: rgb(215, 195, 164);
 
 .recommended-content {
   @include fastDisplay(space-evenly, column, nowrap);
-  // background-color: rgb(215, 195, 164);
-  background: rgb(215,185,164);
-  background: radial-gradient(circle, rgba(215,185,164,1) 6%, rgba(152,96,62,1) 49%, rgba(103,43,11,1) 89%);
+  background: rgb(158,76,29);
+background: radial-gradient(circle, rgba(158,76,29,1) 4%, rgba(131,67,30,1) 28%, rgba(129,56,16,1) 55%, rgba(57,20,0,1) 100%);
   position: relative;
   height: 100vh;
   width: 100%;

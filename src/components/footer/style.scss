@@ -31,11 +31,25 @@ footer {
     padding: 10px;
     position: relative;
 
-    img {
+    .logo {
       position: absolute;
-      top: 60%;
+      top: 42%;
       left: 12%;
       cursor: pointer;
+    }
+
+    .pag1 {
+      position: absolute;
+      top: 65%;
+      left: 9%;
+      width: 15%;
+    }
+
+    .pag2 {
+      position: absolute;
+      top: 73%;
+      left: 6%;
+      width: 20%;
     }
 
     .column {
@@ -43,11 +57,12 @@ footer {
       line-height: 150%;
 
       h2 {
-        font-size: 18px;
+        font-size: 20px;
       }
 
       a {
-        font-size: 14px;
+        font-size: 16px;
+        font-weight: 400;
 
         &:hover {
           font-weight: 600;
